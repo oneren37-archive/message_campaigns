@@ -1,5 +1,10 @@
 import * as path from 'path';
-import { TestEndpoint } from './endpoints/TestEndpoint';
+import {
+  AddCampaign,
+  DeleteCampaign,
+  GetCampaigns,
+  UpdateCampaign,
+} from './endpoints/CampaignEndpoint';
 
 const express = require('express');
 
@@ -9,7 +14,10 @@ const app = express();
 app.use(express.json());
 app.use(express.static(path.resolve(`${__dirname}../../../client/build/`)));
 
-app.get('/api/test', TestEndpoint);
+app.get('/api/campaign', GetCampaigns);
+app.post('/api/campaign', AddCampaign);
+app.put('/api/campaign', UpdateCampaign);
+app.delete('/api/campaign', DeleteCampaign);
 
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(`${__dirname}../../../client/build/index.html`));
