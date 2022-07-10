@@ -1,0 +1,14 @@
+.messenger__content {
+    background-color: #19191A !important;
+    height: 100%;
+}
+
+.mi_text {
+    text-align: left;
+}
+
+.Unfold.Unfold_position_bottomLeft.Unfold_asIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
