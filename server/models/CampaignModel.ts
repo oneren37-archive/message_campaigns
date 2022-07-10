@@ -35,7 +35,19 @@ export class CampaignModel extends AbstractModel implements ICampaignModel {
   }
 
   getAll(): Promise<any> {
-    return this.DB.execute('select * from campaign');
+    return this.DB.execute('select * from campaign')
+      .then((res) => res.results)
+      .then((result) => result.map((res) => ({
+        id: res.id,
+        title: res.title,
+        description: res.description,
+        channels: [
+          res.vk ? 'vk' : '',
+          res.wa ? 'wa' : '',
+          res.tg ? 'tg' : '',
+          res.sms ? 'sms' : '',
+        ].filter((e) => e),
+      })));
   }
 
   update(data): Promise<any> {
