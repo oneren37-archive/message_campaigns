@@ -1,3 +1,4 @@
+/* eslint no-constructor-return: 0 */
 const mysql = require('mysql');
 
 interface IDB {
@@ -14,9 +15,10 @@ export class DB implements IDB {
     database: 'heroku_805f92d88591b45',
   };
 
+  private static instance: any;
+
   private autoConnect() {
     this.connection = mysql.createConnection(this.config);
-
     this.connection.connect((err) => {
       if (err) {
         setTimeout(this.autoConnect, 2000);
@@ -29,7 +31,12 @@ export class DB implements IDB {
   }
 
   constructor() {
+    if (DB.instance) return DB.instance;
+    DB.instance = this;
+
     this.autoConnect();
+
+    return this;
   }
 
   public execute(query: string): any {
