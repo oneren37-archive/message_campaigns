@@ -1,0 +1,95 @@
+.tg-root {
+
+    position: relative;
+    min-width: 400px;
+
+    --vh:8.51px !important;
+    --composer-text-size:16px !important;
+    --message-meta-height:21px !important;
+    --message-text-size:16px !important;
+    --color-primary:rgb(135,116,225) !important;
+    --color-primary-opacity:rgba(131,120,219,0.501961) !important;
+    --color-primary-shade:rgb(123,113,198) !important;
+    --color-primary-shade-rgb:123,113,198 !important;
+    --color-background:rgb(33,33,33) !important;
+    --color-background-compact-menu:rgba(33,33,33,0.866667) !important;
+    --color-background-compact-menu-reactions:rgba(33,33,33,0.866667) !important;
+    --color-background-compact-menu-hover:rgba(0,0,0,0.4) !important;
+    --color-background-secondary:rgb(15,15,15) !important;
+    --color-background-secondary-accent:rgb(16,15,16) !important;
+    --color-background-own:rgb(118,106,200) !important;
+    --color-background-own-apple:rgb(118,106,200) !important;
+    --color-background-selected:rgb(44,44,44) !important;
+    --color-background-own-selected:rgb(101,73,212) !important;
+    --color-chat-hover:rgb(44,44,44) !important;
+    --color-chat-active:rgb(118,106,200) !important;
+    --color-item-active:rgb(41,41,41) !important;
+    --color-text:rgb(255,255,255) !important;
+    --color-text-secondary:rgb(170,170,170) !important;
+    --color-text-secondary-rgb:170,170,170 !important;
+    --color-icon-secondary:rgb(170,170,170) !important;
+    --color-text-secondary-apple:rgb(170,170,170) !important;
+    --color-borders:rgb(48,48,48) !important;
+    --color-borders-input:rgb(91,91,90) !important;
+    --color-dividers:rgb(64,64,64) !important;
+    --color-links:rgb(135,116,225) !important;
+    --color-gray:rgb(113,117,121) !important;
+    --color-pinned:rgb(112,117,121) !important;
+    --color-default-shadow:rgba(16,16,16,0.611765) !important;
+    --color-light-shadow:rgba(0,0,0,0.25098) !important;
+    --color-green:rgb(135,116,225) !important;
+    --color-text-meta-colored:rgb(131,120,219) !important;
+    --color-reply-hover:rgb(39,39,39) !important;
+    --color-reply-active:rgb(46,47,47) !important;
+    --color-reply-own-hover:rgb(135,117,218) !important;
+    --color-reply-own-hover-apple:rgb(135,117,218) !important;
+    --color-reply-own-active:rgb(145,125,234) !important;
+    --color-reply-own-active-apple:rgb(145,125,234) !important;
+    --color-accent-own:rgb(255,255,255) !important;
+    --color-message-meta-own:rgba(255,255,255,0.533333) !important;
+    --color-own-links:rgb(255,255,255) !important;
+    --color-code:rgb(135,116,225) !important;
+    --color-code-own:rgb(255,255,255) !important;
+    --color-code-bg:rgba(255,255,255,0.027451) !important;
+    --color-code-own-bg:rgba(0,0,0,0.12549) !important;
+    --color-composer-button:rgba(170,170,170,0.8) !important;
+    --color-message-reaction:rgb(43,42,53) !important;
+    --color-message-reaction-hover:rgb(52,49,71) !important;
+    --color-message-reaction-own:rgb(103,92,175) !important;
+    --color-message-reaction-hover-own:rgb(91,82,155) !important;
+    --color-voice-transcribe-button:rgb(42,42,60) !important;
+    --color-voice-transcribe-button-own:rgb(131,115,211) !important;
+}
+
+#UiLoader {
+    --theme-background-color: #0F0F0F;
+}
+
+#MiddleColumn {
+    --composer-hidden-scale: 1.16718;
+    --toolbar-hidden-scale: 0.856764;
+    --unpin-hidden-scale: 1.46124;
+    --toolbar-unpin-hidden-scale: 0.68435;
+    --composer-translate-x: 23.1326px;
+    --toolbar-translate-x: -31.5139px;
+    --pattern-color: #0A0A0A8C;
+    --theme-background-color: #0F0F0F;
+}
+
+.text-content {
+    color: #fff
+}
+
+.info .title {
+    color: #fff
+}
+
+
+.BotKeyboardMenu {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.middle-column-footer {
+    margin-bottom: -10px;
+}
