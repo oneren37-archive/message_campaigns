@@ -9,10 +9,12 @@ import './assets/vkui.9ef3a6c2c26dce4f3902.css';
 
 import './assets/override.css';
 
-const ChatViewVK = () => {
+const ChatViewVK = (props: any) => {
+    const { text, buttons, buttonsInline } = props;
+    console.log(props);
     return (
         <>
-            <div className="messenger__content">
+            <div className="vk-root messenger__content">
                 <div className="messenger__body ScrollView">
                     <div className="messenger__spacer"></div>
                     <div className="messenger__convoList">
@@ -28,10 +30,7 @@ const ChatViewVK = () => {
                                             role="img"
                                         >
                                             <div className="Avatar__content">
-                                                <div
-                                                    className="Avatar__image Avatar__image-1"
-                                                    // assets="background-image: url('https://sun6-21.userapi.com/s/v1/ig2/vPNvwWLCvTAEOQnJHZiOve7rwcHxcnMiQ5XCemZGClM3bSJ9Lnu5TxMPVp1tensRpv3vnLrWgkusick9MiTVAa2C.jpg?size=200x200&amp;quality=95&amp;crop=0,0,1080,1080&amp;ava=1')"
-                                                ></div>
+                                                <div className="Avatar__image Avatar__image-1"></div>
                                                 <div className="Avatar__text">
                                                     С
                                                 </div>
@@ -43,7 +42,7 @@ const ChatViewVK = () => {
                                                     className="msg__author"
                                                     href="/sberkot"
                                                 >
-                                                    СберКот
+                                                    Fromni
                                                 </a>
                                                 <div className="msg__date">
                                                     30 июн в 14:18
@@ -57,53 +56,7 @@ const ChatViewVK = () => {
                                                     <div className="mi_cont">
                                                         <div className="mi_body">
                                                             <div className="mi_text">
-                                                                Настройки
-                                                                молодости
-                                                                заданы, настрой
-                                                                пойман, пора
-                                                                праздновать! С
-                                                                Днем молодёжи,
-                                                                котаны <br />
-                                                                <br />
-                                                                Желаю вам
-                                                                постоянно
-                                                                оставаться
-                                                                весёлыми,
-                                                                энергичными и
-                                                                целеустремлёнными,
-                                                                и никогда не
-                                                                забывать, что
-                                                                молодость — это
-                                                                не возраст, а
-                                                                состояние души!
-                                                                Никогда не
-                                                                теряйте её,
-                                                                почаще
-                                                                вспоминайте и
-                                                                давайте ей волю
-                                                                создавать
-                                                                чудесные моменты
-                                                                и воспоминания{' '}
-                                                                <br />
-                                                                <br />
-                                                                Праздник без
-                                                                подарков —
-                                                                совсем не
-                                                                праздник,
-                                                                поэтому я
-                                                                подготовил
-                                                                парочку
-                                                                сюрпризов для
-                                                                вас <br />
-                                                                <br />
-                                                                Чтобы их
-                                                                получить, нужно
-                                                                всего лишь
-                                                                жмякнуть по
-                                                                кнопке или
-                                                                написать мне:
-                                                                «получить
-                                                                подарок»
+                                                                {text}
                                                             </div>
                                                         </div>
                                                     </div>
@@ -111,17 +64,72 @@ const ChatViewVK = () => {
                                             </div>
                                             <div className="msg__keyboard">
                                                 <div className="BotsKeyboard__main">
-                                                    <div className="BotsKeyboard__row">
-                                                        <button
-                                                            className="BotsKeyboard__button BotsKeyboard__button--primary Btn Btn_theme_none Btn_size_normal"
-                                                            type="button"
-                                                            data-position="0,0"
-                                                        >
-                                                            <div className="Btn__text">
-                                                                Получить подарок
-                                                            </div>
-                                                        </button>
-                                                    </div>
+                                                    {buttonsInline &&
+                                                        buttonsInline
+                                                            .map(
+                                                                (
+                                                                    button: any,
+                                                                    i: number,
+                                                                ) => {
+                                                                    console.log(
+                                                                        button,
+                                                                    );
+                                                                    if (
+                                                                        i % 2 ==
+                                                                        1
+                                                                    )
+                                                                        return;
+                                                                    const first =
+                                                                        button;
+                                                                    const second =
+                                                                        buttonsInline[
+                                                                            i +
+                                                                                1
+                                                                        ];
+                                                                    return (
+                                                                        <div
+                                                                            className="BotsKeyboard__row"
+                                                                            key={
+                                                                                i
+                                                                            }
+                                                                        >
+                                                                            <button
+                                                                                className="BotsKeyboard__button BotsKeyboard__button--primary Btn Btn_theme_none Btn_size_normal"
+                                                                                type="button"
+                                                                                data-position="0,0"
+                                                                                key={
+                                                                                    first.id
+                                                                                }
+                                                                            >
+                                                                                <div className="Btn__text">
+                                                                                    {
+                                                                                        first.text
+                                                                                    }
+                                                                                </div>
+                                                                            </button>
+                                                                            {second && (
+                                                                                <button
+                                                                                    className="BotsKeyboard__button BotsKeyboard__button--primary Btn Btn_theme_none Btn_size_normal"
+                                                                                    type="button"
+                                                                                    data-position="0,0"
+                                                                                    key={
+                                                                                        second.id
+                                                                                    }
+                                                                                >
+                                                                                    <div className="Btn__text">
+                                                                                        {
+                                                                                            second.text
+                                                                                        }
+                                                                                    </div>
+                                                                                </button>
+                                                                            )}
+                                                                        </div>
+                                                                    );
+                                                                },
+                                                            )
+                                                            .filter(
+                                                                (e: any) => e,
+                                                            )}
                                                 </div>
                                             </div>
                                         </div>
@@ -396,50 +404,60 @@ const ChatViewVK = () => {
                                     </div>
                                     <div className="uMailWrite__keyboard ScrollView uMailWrite__keyboard_open">
                                         <div className="BotsKeyboard__main">
-                                            <div className="BotsKeyboard__row">
-                                                <button
-                                                    className="BotsKeyboard__button BotsKeyboard__button--positive Btn Btn_theme_none Btn_size_normal"
-                                                    type="button"
-                                                    data-position="0,0"
-                                                >
-                                                    <div className="Btn__text">
-                                                        Зайти в гости к СберКоту
-                                                    </div>
-                                                </button>
-                                            </div>
-                                            <div className="BotsKeyboard__row">
-                                                <button
-                                                    className="BotsKeyboard__button BotsKeyboard__button--positive Btn Btn_theme_none Btn_size_normal"
-                                                    type="button"
-                                                    data-position="1,0"
-                                                >
-                                                    <div className="Btn__text">
-                                                        Перекрасить диалог
-                                                    </div>
-                                                </button>
-                                            </div>
-                                            <div className="BotsKeyboard__row">
-                                                <button
-                                                    className="BotsKeyboard__button BotsKeyboard__button--primary Btn Btn_theme_none Btn_size_normal"
-                                                    type="button"
-                                                    data-position="2,0"
-                                                >
-                                                    <div className="Btn__text">
-                                                        Сохранить и накопить
-                                                    </div>
-                                                </button>
-                                            </div>
-                                            <div className="BotsKeyboard__row">
-                                                <button
-                                                    className="BotsKeyboard__button BotsKeyboard__button--positive Btn Btn_theme_none Btn_size_normal"
-                                                    type="button"
-                                                    data-position="3,0"
-                                                >
-                                                    <div className="Btn__text">
-                                                        Собрать все стикеры
-                                                    </div>
-                                                </button>
-                                            </div>
+                                            {buttons &&
+                                                buttons
+                                                    .map(
+                                                        (
+                                                            button: any,
+                                                            i: number,
+                                                        ) => {
+                                                            console.log(button);
+                                                            if (i % 2 == 1)
+                                                                return;
+                                                            const first =
+                                                                button;
+                                                            const second =
+                                                                buttons[i + 1];
+                                                            return (
+                                                                <div
+                                                                    className="BotsKeyboard__row"
+                                                                    key={i}
+                                                                >
+                                                                    <button
+                                                                        className="BotsKeyboard__button BotsKeyboard__button--positive Btn Btn_theme_none Btn_size_normal"
+                                                                        type="button"
+                                                                        data-position="0,0"
+                                                                        key={
+                                                                            first.id
+                                                                        }
+                                                                    >
+                                                                        <div className="Btn__text">
+                                                                            {
+                                                                                first.text
+                                                                            }
+                                                                        </div>
+                                                                    </button>
+                                                                    {second && (
+                                                                        <button
+                                                                            className="BotsKeyboard__button BotsKeyboard__button--positive Btn Btn_theme_none Btn_size_normal"
+                                                                            type="button"
+                                                                            data-position="0,0"
+                                                                            key={
+                                                                                second.id
+                                                                            }
+                                                                        >
+                                                                            <div className="Btn__text">
+                                                                                {
+                                                                                    second.text
+                                                                                }
+                                                                            </div>
+                                                                        </button>
+                                                                    )}
+                                                                </div>
+                                                            );
+                                                        },
+                                                    )
+                                                    .filter((e: any) => e)}
                                         </div>
                                     </div>
                                     <div className="uMailWrite__templates">

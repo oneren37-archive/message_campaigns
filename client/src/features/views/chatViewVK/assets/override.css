@@ -1,0 +1,34 @@
+.messenger__content {
+    background-color: #19191A !important;
+    height: 100%;
+}
+
+.mi_text {
+    text-align: left;
+    white-space: pre-wrap;
+}
+
+.Unfold.Unfold_position_bottomLeft.Unfold_asIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.vk-root {
+    min-width: 400px;
+    width: 400px;
+}
+
+.Avatar__image-1 {
+    background-image: url('https://thispersondoesnotexist.com/image')
+}
+
+.messenger__convoList {
+    overflow-y: scroll;
+    scrollbar-width: none; /*mozilla*/
+}
+
+.messenger__convoList::-webkit-scrollbar {
+    display: none; /*chrome*/
+}
