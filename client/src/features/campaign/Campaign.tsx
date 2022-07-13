@@ -10,6 +10,7 @@ import waIcon from '../../assets/icons/wa.svg';
 import tgIcon from '../../assets/icons/tg.svg';
 import smsIcon from '../../assets/icons/sms.svg';
 import deleteIcon from './trash.svg';
+import { useNavigate } from 'react-router-dom';
 
 export type CampaignProps = {
     id: number;
@@ -67,7 +68,9 @@ const Campaign = (props: CampaignProps) => {
         tg: tgIcon,
         sms: smsIcon,
     };
+
     const dispatch = useAppDispatch();
+
     const handleRemove = () => {
         fetch('/api/campaign', {
             method: 'DELETE',
@@ -76,8 +79,13 @@ const Campaign = (props: CampaignProps) => {
         }).then(() => dispatch(remove({ id: props.id })));
     };
 
+    const navigate = useNavigate();
+
     return (
-        <div className={style.campaign}>
+        <div
+            className={style.campaign}
+            onClick={() => navigate('/campaign', { state: props })}
+        >
             <h4>{props.title}</h4>
             <p>{props.description || ''}</p>
             <div>
@@ -102,13 +110,7 @@ const Campaign = (props: CampaignProps) => {
 };
 
 const AddCampaignPopup = (props: any) => {
-    // const [title, setTitle] = useState<string>('')
-    // const validate = () => {
-    //
-    // }
-
     const dispatch = useAppDispatch();
-
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);

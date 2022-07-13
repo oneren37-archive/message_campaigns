@@ -5,6 +5,7 @@ import {
   GetCampaigns,
   UpdateCampaign,
 } from './endpoints/CampaignEndpoint';
+import { AddMessage } from './endpoints/MessageEndpoint';
 
 const express = require('express');
 
@@ -18,6 +19,8 @@ app.get('/api/campaign', GetCampaigns);
 app.post('/api/campaign', AddCampaign);
 app.put('/api/campaign', UpdateCampaign);
 app.delete('/api/campaign', DeleteCampaign);
+
+app.post('/api/message', AddMessage);
 
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(`${__dirname}../../../client/build/index.html`));

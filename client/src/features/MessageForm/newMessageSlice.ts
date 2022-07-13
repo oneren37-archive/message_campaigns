@@ -19,7 +19,11 @@ export const newMessageReducer = createSlice({
             const button = action.payload.button;
             state.channels.forEach((channel) => {
                 if (toChannel === 'all' || toChannel === channel.channelType) {
-                    channel.buttons.push(button);
+                    if (channel.restrictions.isButtonAvailable) {
+                        if (!channel.restrictions.isButtonLinkAvailable)
+                            button.url = '';
+                        channel.buttons.push(button);
+                    }
                 }
             });
         },
@@ -28,7 +32,10 @@ export const newMessageReducer = createSlice({
             const button = action.payload.button;
             state.channels.forEach((channel) => {
                 if (toChannel === 'all' || toChannel === channel.channelType) {
-                    channel.buttons_inline.push(button);
+                    if (!channel.restrictions.isButtonInlineLinkAvailable)
+                        button.url = '';
+                    if (channel.restrictions.isButtonAvailable)
+                        channel.buttons_inline.push(button);
                 }
             });
         },
@@ -55,6 +62,8 @@ export const newMessageReducer = createSlice({
                 }
             });
         },
+
+        clear: () => initialState,
     },
 });
 
@@ -64,6 +73,7 @@ export const {
     addButtonInline,
     removeButton,
     removeButtonInline,
+    clear,
 } = newMessageReducer.actions;
 
 export default newMessageReducer.reducer;

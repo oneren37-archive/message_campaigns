@@ -11,7 +11,6 @@ import './assets/override.css';
 
 const ChatViewVK = (props: any) => {
     const { text, buttons, buttonsInline } = props;
-    console.log(props);
     return (
         <>
             <div className="vk-root messenger__content">
@@ -71,9 +70,6 @@ const ChatViewVK = (props: any) => {
                                                                     button: any,
                                                                     i: number,
                                                                 ) => {
-                                                                    console.log(
-                                                                        button,
-                                                                    );
                                                                     if (
                                                                         i % 2 ==
                                                                         1
@@ -411,7 +407,6 @@ const ChatViewVK = (props: any) => {
                                                             button: any,
                                                             i: number,
                                                         ) => {
-                                                            console.log(button);
                                                             if (i % 2 == 1)
                                                                 return;
                                                             const first =
