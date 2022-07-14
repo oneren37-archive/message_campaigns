@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React from 'react';
 
-import './assets/common.8f1038b200980a03bd3e.css';
+// import './assets/common.8f1038b200980a03bd3e.css';
 import './assets/legacy.766a9732cbda281e99a7.css';
 import './assets/mail.3eb228a6022129042aac.css';
 import './assets/variables.02ab01a371470db8d7ff.css';
