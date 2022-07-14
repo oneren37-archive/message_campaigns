@@ -71,7 +71,8 @@ const Campaign = (props: CampaignProps) => {
 
     const dispatch = useAppDispatch();
 
-    const handleRemove = () => {
+    const handleRemove = (e: any) => {
+        e.stopPropagation();
         fetch('/api/campaign', {
             method: 'DELETE',
             body: JSON.stringify({ id: props.id }),

@@ -989,7 +989,7 @@ ul {
     border: 0;
 }
 
-.button {
+.vk-root .button {
     text-align: center;
     cursor: pointer;
     font-size: 15px;

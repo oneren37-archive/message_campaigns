@@ -1,0 +1,24 @@
+.MessageView {
+    display: flex;
+    max-width: 550px;
+    margin: 50px auto;
+}
+
+.controls {
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.controlsItem {
+    padding: 30px;
+    background-color: #F0EDF8;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.view {
+    width: 400px;
+    height: 600px;
+}

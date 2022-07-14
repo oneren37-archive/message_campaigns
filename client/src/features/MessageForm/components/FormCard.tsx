@@ -8,6 +8,7 @@ import ChatViewVK from '../../views/chatViewVK/ChatViewVK';
 import ChatViewTG from '../../views/chatViewTG/ChatViewTG';
 import ChatViewSMS from '../../views/chatViewSMS/ChatViewSMS';
 import ButtonsForm from './ButtonsForm';
+import ChatViewWA from '../../views/chatViewWA/ChatViewWA';
 
 export interface IFormCardProps {
     type: 'all' | 'vk' | 'wa' | 'tg' | 'sms';
@@ -44,14 +45,16 @@ const FormCard = (props: IFormCardProps) => {
         <>
             <FormCardTitle type={props.type} />
             <div className={style.card}>
-                {/*<iframe*/}
-                {/*    src={'/tg'}*/}
-                {/*    width={400}*/}
-                {/*    height={600}*/}
-                {/*></iframe>*/}
                 <div className={style.view}>
                     {props.type === 'vk' && (
                         <ChatViewVK
+                            text={text}
+                            buttons={buttons}
+                            buttonsInline={buttonsInline}
+                        />
+                    )}
+                    {props.type === 'wa' && (
+                        <ChatViewWA
                             text={text}
                             buttons={buttons}
                             buttonsInline={buttonsInline}

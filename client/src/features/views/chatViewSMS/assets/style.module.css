@@ -202,6 +202,7 @@
   margin: 3px 10px;
   float: right;
   text-align: left;
+  white-space: pre-wrap
 }
 .message_area div .sms_box :hover {
   background: #1ba8fc;

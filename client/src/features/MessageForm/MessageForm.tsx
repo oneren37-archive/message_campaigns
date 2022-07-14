@@ -1,11 +1,10 @@
 import style from './assets/style.module.css';
 import FormCard from './components/FormCard';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../app/store';
 import { INewMessageState } from './types';
 import { useState } from 'react';
-import { add } from '../campaign/campaignSlice';
 import { useAppDispatch } from '../../app/hooks';
 import { clear } from './newMessageSlice';
 
@@ -16,6 +15,7 @@ const MessageForm = () => {
     const dispatch = useAppDispatch();
 
     const [errorMessage, setErrorMessage] = useState<string>('');
+    const navigate = useNavigate();
 
     const getChannelName = (type: string) => {
         if (type === 'vk') return 'Вконтакте';
@@ -114,7 +114,9 @@ const MessageForm = () => {
                     }),
                 }),
                 headers: { 'Content-Type': 'application/json' },
-            }).then(() => dispatch(clear()));
+            })
+                .then(() => dispatch(clear()))
+                .then(() => navigate(-1));
         } else setErrorMessage(validationResult);
     };
 

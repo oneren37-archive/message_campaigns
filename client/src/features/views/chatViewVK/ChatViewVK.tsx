@@ -223,9 +223,9 @@ const ChatViewVK = (props: any) => {
                                                     <g
                                                         id="smile_outline_28__Page-1"
                                                         stroke="none"
-                                                        stroke-width="1"
+                                                        strokeWidth="1"
                                                         fill="none"
-                                                        fill-rule="evenodd"
+                                                        fillRule="evenodd"
                                                     >
                                                         <g id="smile_outline_28__smile_outline_28">
                                                             <path d="M0 0h28v28H0z"></path>
@@ -233,7 +233,7 @@ const ChatViewVK = (props: any) => {
                                                                 d="M14 26a12 12 0 1 1 0-24 12 12 0 0 1 0 24Zm0-2a10 10 0 1 0 0-20 10 10 0 0 0 0 20Zm-4.39-5.9a1 1 0 1 1 1.46-1.37 4 4 0 0 0 5.85 0 1 1 0 1 1 1.47 1.36l-.3.3a6 6 0 0 1-8.48-.3Zm7.77-4.85a1.63 1.63 0 1 1 0-3.25 1.63 1.63 0 0 1 0 3.25Zm-6.75 0a1.63 1.63 0 1 1 0-3.25 1.63 1.63 0 0 1 0 3.25Z"
                                                                 id="smile_outline_28__Icon-Color"
                                                                 fill="currentColor"
-                                                                fill-rule="nonzero"
+                                                                fillRule="nonzero"
                                                             ></path>
                                                         </g>
                                                     </g>
@@ -254,9 +254,9 @@ const ChatViewVK = (props: any) => {
                                                     <g
                                                         id="smile_outline_28__Page-1"
                                                         stroke="none"
-                                                        stroke-width="1"
+                                                        strokeWidth="1"
                                                         fill="none"
-                                                        fill-rule="evenodd"
+                                                        fillRule="evenodd"
                                                     >
                                                         <g id="smile_outline_28__smile_outline_28">
                                                             <path d="M0 0h28v28H0z"></path>
@@ -264,7 +264,7 @@ const ChatViewVK = (props: any) => {
                                                                 d="M14 26a12 12 0 1 1 0-24 12 12 0 0 1 0 24Zm0-2a10 10 0 1 0 0-20 10 10 0 0 0 0 20Zm-4.39-5.9a1 1 0 1 1 1.46-1.37 4 4 0 0 0 5.85 0 1 1 0 1 1 1.47 1.36l-.3.3a6 6 0 0 1-8.48-.3Zm7.77-4.85a1.63 1.63 0 1 1 0-3.25 1.63 1.63 0 0 1 0 3.25Zm-6.75 0a1.63 1.63 0 1 1 0-3.25 1.63 1.63 0 0 1 0 3.25Z"
                                                                 id="smile_outline_28__Icon-Color"
                                                                 fill="currentColor"
-                                                                fill-rule="nonzero"
+                                                                fillRule="nonzero"
                                                             ></path>
                                                         </g>
                                                     </g>
@@ -290,9 +290,9 @@ const ChatViewVK = (props: any) => {
                                                     <g
                                                         id="send_28__Page-2"
                                                         stroke="none"
-                                                        stroke-width="1"
+                                                        strokeWidth="1"
                                                         fill="none"
-                                                        fill-rule="evenodd"
+                                                        fillRule="evenodd"
                                                     >
                                                         <g id="send_28__send_28">
                                                             <path
@@ -323,9 +323,9 @@ const ChatViewVK = (props: any) => {
                                                     <g
                                                         id="send_28__Page-2"
                                                         stroke="none"
-                                                        stroke-width="1"
+                                                        strokeWidth="1"
                                                         fill="none"
-                                                        fill-rule="evenodd"
+                                                        fillRule="evenodd"
                                                     >
                                                         <g id="send_28__send_28">
                                                             <path
@@ -356,9 +356,9 @@ const ChatViewVK = (props: any) => {
                                                     <g
                                                         id="voice_outline_28__Page-1"
                                                         stroke="none"
-                                                        stroke-width="1"
+                                                        strokeWidth="1"
                                                         fill="none"
-                                                        fill-rule="evenodd"
+                                                        fillRule="evenodd"
                                                     >
                                                         <g id="voice_outline_28__voice_outline_28">
                                                             <path d="M0 0h28v28H0z"></path>
@@ -366,7 +366,7 @@ const ChatViewVK = (props: any) => {
                                                                 d="M23 12a1 1 0 0 1 1 1 10 10 0 0 1-9 9.95V25a1 1 0 0 1-2 0v-2.05A10 10 0 0 1 4 13a1 1 0 0 1 2 0 8 8 0 1 0 16 0 1 1 0 0 1 1-1ZM14 2a6 6 0 0 1 6 6v5a6 6 0 1 1-12 0V8a6 6 0 0 1 6-6Zm0 2a4 4 0 0 0-4 4v5a4 4 0 1 0 8 0V8a4 4 0 0 0-4-4Z"
                                                                 id="voice_outline_28__Icon-Color"
                                                                 fill="currentColor"
-                                                                fill-rule="nonzero"
+                                                                fillRule="nonzero"
                                                             ></path>
                                                         </g>
                                                     </g>

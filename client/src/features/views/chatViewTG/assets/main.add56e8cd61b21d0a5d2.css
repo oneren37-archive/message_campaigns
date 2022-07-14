@@ -2310,7 +2310,9 @@ body.is-safari .Transition.slide-optimized,body.is-safari .Transition.slide-opti
   unicode-range: U+0600-06FF;
 }
 
-*,*::before,*::after {
+.tg-root *,
+.tg-root *::before,
+.tg-root *::after {
   box-sizing: border-box;
 }
 
@@ -4246,7 +4248,7 @@ body.cursor-ew-resize {
   cursor: not-allowed !important;
 }
 
-* {
+.tg-root * {
   box-sizing: border-box;
 }
 

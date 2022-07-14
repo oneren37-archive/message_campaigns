@@ -5,7 +5,10 @@ import {
   GetCampaigns,
   UpdateCampaign,
 } from './endpoints/CampaignEndpoint';
-import { AddMessage } from './endpoints/MessageEndpoint';
+import {
+  AddMessage,
+  GetMessageByCampaignId,
+} from './endpoints/MessageEndpoint';
 
 const express = require('express');
 
@@ -20,6 +23,7 @@ app.post('/api/campaign', AddCampaign);
 app.put('/api/campaign', UpdateCampaign);
 app.delete('/api/campaign', DeleteCampaign);
 
+app.get('/api/message', GetMessageByCampaignId);
 app.post('/api/message', AddMessage);
 
 app.get('*', (req, res) => {

@@ -60,8 +60,8 @@ const ButtonsForm = (props: IButtonsFormProps) => {
             );
         } else setNewButtonError(validationResult);
 
-        // setNewButtonText('')
-        // setNewButtonUrl('')
+        setNewButtonText('');
+        setNewButtonUrl('');
     };
     return (
         <div className={style.buttons_normal}>
@@ -94,13 +94,12 @@ const ButtonsForm = (props: IButtonsFormProps) => {
             {buttons.map((button, index) => {
                 if (button.text.length > restrictions.maxButtonTextLength) {
                     return (
-                        <span className="error">
+                        <span className="error" key={button.id}>
                             Текст кнопки{' '}
                             <MessageButton
                                 {...button}
                                 buttonType={buttonsType}
                                 channel={channel}
-                                key={button.id}
                             />{' '}
                             слишком длинный ({button.text.length}). Ограничение
                             - {restrictions.maxButtonTextLength} символов
