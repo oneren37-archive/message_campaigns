@@ -35,6 +35,16 @@ const MessageForm = () => {
             for (let i = 0; i < channels.length; i++) {
                 const channel = channels[i];
 
+                // проверка наличия сообщения
+                if (
+                    channel.channelType !== 'all' &&
+                    channel.text.length === 0
+                ) {
+                    return `В канале ${getChannelName(
+                        channel.channelType,
+                    )} текст сообщения пуст`;
+                }
+
                 // проверка длинны сообщения
                 if (channel.text.length > channel.restrictions.maxTextLength) {
                     return `В канале ${getChannelName(
